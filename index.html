@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form Example</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <section class="hero is-primary is-medium">
+      <!-- Hero head: will stick at the top -->
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item">
+                <h1 class="title" id="home">ACME</h1>
+              </a>
+              <span class="navbar-burger" data-target="navbarMenuHeroA">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroA" class="navbar-menu">
+              <div class="navbar-end">
+                <a class="navbar-item is-active" href="#home"> Home </a>
+                <a class="navbar-item" href="#aboutus"> About Us </a>
+                <a class="navbar-item" href="#ourteam"> Our Team </a>
+                <span class="navbar-item">
+                  <a class="button is-primary is-inverted" href="#contact">
+                    <span class="icon">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                    <span>Contact</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Hero content: will be in the middle -->
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <p class="title">ACME</p>
+          <p class="subtitle">Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section is-medium container">
+      <h1 class="title" id="aboutus">About us</h1>
+      <h2 class="subtitle">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam amet
+        non molestias impedit eos? Odit, repellendus dignissimos veritatis,
+        eaque quis dolorum hic doloremque minus odio illo repudiandae suscipit
+        consequatur perferendis?
+      </h2>
+    </section>
+    <hr />
+    <section class="section is-medium container">
+      <h1 class="title" id="ourteam">Our Team</h1>
+      <h2 class="subtitle">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
+        facere omnis perferendis magnam at fugit non sint dolore dicta impedit
+        quo voluptatum unde velit ab.
+      </h2>
+    </section>
+    <hr />
+    <section class="section container">
+      <form name="contact" id="contact-form">
+        <h1 class="title" id="contact">Contact</h1>
+        <div class="field">
+          <label class="label" for="name">Name</label>
+          <div class="control">
+            <input
+              required
+              class="input"
+              type="text"
+              placeholder="yourname"
+              name="name"
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="email">Email</label>
+          <div class="control has-icons-left">
+            <input
+              class="input"
+              type="email"
+              required
+              placeholder="Email input"
+              name="email"
+            />
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="subject">Subject</label>
+          <div class="control">
+            <div class="select">
+              <select name="subject">
+                <option value="">Select a subject</option>
+                <option value="quote">Quote</option>
+                <option value="project">Project</option>
+                <option value="job">Job Offer</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="message">Message</label>
+          <div class="control">
+            <textarea
+              required
+              class="textarea"
+              placeholder="Textarea"
+              name="message"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-primary" type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered container">
+        <p>
+          <strong>Footer</strong>
+          <a href="">My link</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+
+</html>
