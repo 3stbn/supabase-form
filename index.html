@@ -154,5 +154,36 @@
       </div>
     </footer>
   </body>
+  <script src="https://unpkg.com/@supabase/supabase-js"></script>
+  <script>
+      const { createClient } = supabase
+      supabase = createClient("https://qtvhgnejhiaizxqyjwmz.supabase.co", "<<yourAnonKeyGoesHere>>")
+      
+      const form = document.querySelector('#contact-form')
+      form.addEventListener('submit', async (event) => {
+          event.preventDefault()
 
+          const formInputs = form.querySelectorAll('input, select, textarea')
+
+          let submision = {}
+
+          formInputs.forEach(element => {
+            const { value, name } = element
+            if (value) {
+                submision[name] = value
+            }
+          })
+
+          const { error } = await supabase.from('entries').insert([submision], { returning: 'minimal'})
+
+          if (error) {
+              alert('There was an error please try again')
+          } else {
+              alert('Thanks for contacting us')
+          }
+
+          formInputs.forEach(element => element.value = '')
+
+      })
+  </script>
 </html>
